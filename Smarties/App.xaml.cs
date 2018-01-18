@@ -8,7 +8,22 @@ namespace Smarties
         {
             InitializeComponent();
 
-            MainPage = new SmartiesPage();
+            var tabs = new TabbedPage();
+
+            var tab1 = new NavigationPage(new SmartiesPage());
+            tab1.Title = "Home";
+
+
+            var generalSettingsPage = new GeneralSettingsPage();
+            generalSettingsPage.BindingContext = AppContext.GeneralSettings;
+            var tab2 = new NavigationPage(generalSettingsPage);
+            tab2.Title = "Settings";
+
+            tabs.Children.Add(tab1);
+            tabs.Children.Add(tab2);
+
+            MainPage = tabs;
+
         }
 
         protected override void OnStart()

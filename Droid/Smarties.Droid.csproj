@@ -126,6 +126,11 @@
     <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable\office.png" />
+    <AndroidResource Include="Resources\drawable\diningroom.png" />
+    <AndroidResource Include="Resources\drawable\bathroom.png" />
+    <AndroidResource Include="Resources\drawable\bedroom.png" />
+    <AndroidResource Include="Resources\drawable\livingroom.png" />
   </ItemGroup>
   <Import Project="..\Smarties\Smarties.projitems" Label="Shared" Condition="Exists('..\Smarties\Smarties.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
