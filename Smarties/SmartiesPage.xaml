@@ -8,7 +8,7 @@
             x:Name="listView"
             CachingStrategy="RecycleElement"
             RowHeight="100"
-            SeparatorVisibility="None">
+            SeparatorVisibility="Default">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -27,9 +27,9 @@
                             <StackLayout
                                 Padding="15,0">
                                 <Label
-                                    Text="bal" />
+                                    Text="{Binding Text}" />
                                 <Label
-                                    Text="bla"
+                                    Text="{Binding Detail}"
                                     FontSize="Small" />
                             </StackLayout>
                         </StackLayout>

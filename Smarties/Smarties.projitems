@@ -41,5 +41,6 @@
       <DependentUpon>GeneralSettingsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)AppContext.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ListItem.cs" />
   </ItemGroup>
 </Project>
