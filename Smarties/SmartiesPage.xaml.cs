@@ -7,29 +7,30 @@ namespace Smarties
     public partial class SmartiesPage : ContentPage
     {
 
-        ObservableCollection<ListItem> listItems = new ObservableCollection<ListItem>();
+        ObservableCollection<Room> rooms = new ObservableCollection<Room>();
 
 
         public SmartiesPage()
         {
             InitializeComponent();
 
-            listView.ItemsSource = listItems;
+            listView.ItemsSource = rooms;
 
-            listItems.Add(new ListItem { Text = "Room 1", Detail = "Living Room", Image  = "livingroom.png" });
-            listItems.Add(new ListItem { Text = "Room 2", Detail = "Bed Room" , Image = "bedroom.png"});
-            listItems.Add(new ListItem { Text = "Room 3", Detail = "Office", Image = "office.png" });
+            rooms.Add(new Room { RoomName = "Room 1", Beacon = "Beacon1", Hue = "Hue1", Image  = "livingroom.png"});
+            rooms.Add(new Room { RoomName = "Room 2", Beacon = "Bed Room Beacon", Hue = "Bed Room Hue" , Image = "bedroom.png"});
+            rooms.Add(new Room { RoomName = "Room 3", Beacon = "Office Beacon", Hue = "Office Hue", Image = "office.png" });
 
-        }
-
-        public void AddItem(string itemText, string detailText, string ImageUrl)
-        {
-            listItems.Add(new ListItem { Text = itemText, Detail = detailText, Image = ImageUrl });
         }
 
         async void OnButtonClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new NewRoomPage());
+            await Navigation.PushAsync(new RoomSettingsPage(rooms));
+        }
+
+        void OnTapGestureRecognizerTapped(object sender, EventArgs e)
+        {
+            Console.WriteLine(sender);
+
         }
     }
 }

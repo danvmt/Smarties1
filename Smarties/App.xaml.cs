@@ -8,21 +8,21 @@ namespace Smarties
         {
             InitializeComponent();
 
-            var tabs = new TabbedPage();
+            //var tabs = new TabbedPage();
 
-            var tab1 = new NavigationPage(new SmartiesPage());
-            tab1.Title = "Home";
+            //var tab1 = new NavigationPage(new SmartiesPage());
+            //tab1.Title = "Home";
 
 
-            var generalSettingsPage = new GeneralSettingsPage();
-            generalSettingsPage.BindingContext = AppContext.GeneralSettings;
-            var tab2 = new NavigationPage(generalSettingsPage);
-            tab2.Title = "Settings";
+            //var generalSettingsPage = new GeneralSettingsPage();
+            //generalSettingsPage.BindingContext = AppContext.GeneralSettings;
+            //var tab2 = new NavigationPage(generalSettingsPage);
+            //tab2.Title = "Settings";
 
-            tabs.Children.Add(tab1);
-            tabs.Children.Add(tab2);
+            //tabs.Children.Add(tab1);
+            //tabs.Children.Add(tab2);
 
-            MainPage = tabs;
+            MainPage = new NavigationPage(new SmartiesPage());
 
         }
 

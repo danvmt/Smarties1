@@ -3,6 +3,9 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     xmlns:local="clr-namespace:Smarties" 
     x:Class="Smarties.SmartiesPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="AddItem" Order="Primary" Text="+" Priority="0" Activated="OnButtonClicked"/>
+    </ContentPage.ToolbarItems>
     <StackLayout>
         <ListView
             x:Name="listView"
@@ -27,9 +30,12 @@
                             <StackLayout
                                 Padding="15,0">
                                 <Label
-                                    Text="{Binding Text}" />
+                                    Text="{Binding RoomName}" />
                                 <Label
-                                    Text="{Binding Detail}"
+                                    Text="{Binding Beacon}"
+                                    FontSize="Small" />
+                                <Label
+                                    Text="{Binding Hue}"
                                     FontSize="Small" />
                             </StackLayout>
                         </StackLayout>
@@ -37,10 +43,10 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <Button
+<!--        <Button
             Text="Add Item"
             HorizontalOptions="Center"
             VerticalOptions="CenterAndExpand"
             Clicked="OnButtonClicked" />
-    </StackLayout>
+-->    </StackLayout>
 </ContentPage>
